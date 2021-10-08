@@ -9,7 +9,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "DEMO_ACCOUNT_TYPE", schema = "HR")
 public class AccountTransaction implements Serializable {
-    private static final long serialVersionUID = 0;
+    private static final long serialVersionUID = -6849794470754667710L;
 
     private Long transactionId;
     private Long accountTypeId;

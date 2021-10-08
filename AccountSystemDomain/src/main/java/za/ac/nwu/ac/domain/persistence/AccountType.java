@@ -10,11 +10,11 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "DEMO_ACCOUNT_TYPE", schema = "VITRSA_SANDBOX")
+@Table(name = "DEMO_ACCOUNT_TYPE", schema = "HR")
 
 public class AccountType implements Serializable{
 
-    private static final long serialVersionUID = 0;
+    private static final long serialVersionUID = -6849794470754667710L;
 
     private Long accountTypeId;
     private String mnemonic;

@@ -38,7 +38,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
-                <version>4.3.30.RELEASE</version>
+                <version>5.1.8.RELEASE</version>
                 <scope>compile</scope>
             </dependency>
             <dependency>
@@ -56,6 +56,21 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter</artifactId>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <artifactId>logback-classic</artifactId>-->
+<!--                        <groupId>ch.qos.logback</groupId>-->
+<!--                    </exclusion>-->
+<!--                    <exclusion>-->
+<!--                        <artifactId>log4j-over-slf4j</artifactId>-->
+<!--                        <groupId>org.slf4j</groupId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
@@ -80,6 +95,10 @@
                 <groupId>com.oracle</groupId>
                 <artifactId>ojdbc7</artifactId>
                 <version>12.1.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle.ojdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
@@ -113,12 +132,16 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.30.RELEASE</version>
+            <version>5.1.8.RELEASE</version>
         </dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.junit.jupiter</groupId>-->
