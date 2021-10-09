@@ -1,12 +1,16 @@
 package za.ac.nwu.ac.translator.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import za.ac.nwu.ac.domain.dto.AccountTypeDto;
 import za.ac.nwu.ac.domain.persistence.AccountType;
 import za.ac.nwu.ac.repo.persistence.AccountTypeRepository;
 import za.ac.nwu.ac.translator.AccountTypeTranslator;
+import javax.persistence.Id;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +23,7 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator {
     public AccountTypeTranslatorImpl(AccountTypeRepository accountTypeRepository){
         this.accountTypeRepository = accountTypeRepository;
     }
+
 
     @Override
     public List <AccountTypeDto> getAllAccountTypes(){

@@ -54,8 +54,23 @@
                         <groupId>org.slf4j</groupId>
                         <artifactId>slf4j-api</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.slf4j</groupId>-->
+<!--                <artifactId>slf4j-jdk14</artifactId>-->
+<!--                <version>1.5.6</version>-->
+<!--                <scope>compile</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>ch.qos.logback</groupId>-->
+<!--                <artifactId>logback-classic</artifactId>-->
+<!--                <version>${logback.version}</version>-->
+<!--            </dependency>-->
 
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
@@ -86,7 +101,8 @@
                 <artifactId>springfox-bean-validators</artifactId>
                 <version>${springfox-swagger.version}</version>
             <exclusions>
-            <exclusion><groupId>org.slf4j</groupId>
+            <exclusion>
+                <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
             </exclusion>
             </exclusions>
@@ -125,10 +141,16 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.2.3.Final</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
