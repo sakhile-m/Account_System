@@ -21,16 +21,16 @@ import za.ac.nwu.ac.logic.flow.FetchAccountTypeFlow;
 import java.util.List;
 
 @RestController
-@RequestMapping("/account-type")
+@RequestMapping("account-type")
 public class AccountTypeController {
 
     private final FetchAccountTypeFlow fetchAccountTypeFlow;
-    private final CreateAccountTypeFlow createAccountTypeFlow;
+    //private final CreateAccountTypeFlow createAccountTypeFlow;
 
     @Autowired
-    public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow, CreateAccountTypeFlow createAccountTypeFlow){
+    public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow){//, CreateAccountTypeFlow createAccountTypeFlow){
         this.fetchAccountTypeFlow = fetchAccountTypeFlow;
-        this.createAccountTypeFlow = createAccountTypeFlow;
+        //this.createAccountTypeFlow = createAccountTypeFlow;
     }
 
     @GetMapping("/all")

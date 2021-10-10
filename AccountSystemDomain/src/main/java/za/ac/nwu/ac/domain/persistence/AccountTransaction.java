@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
-
+import lombok.*;
 
 @Entity
 @Table(name = "DEMO_ACCOUNT_TYPE", schema = "HR")
@@ -31,9 +31,9 @@ public class AccountTransaction implements Serializable {
     }
 
     @Id
-    @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ", sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "VIT_RSA_GENERIC_SEQ")
-    @Column(name = "TX_ID")
+    @SequenceGenerator(name = "HR_GENERIC_SEQ", sequenceName = "HR.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
+    @GeneratedValue//(strategy = GenerationType.SEQUENCE, generator = "HR_GENERIC_SEQ")
+    @Column(name = "ACCOUNT_TX_ID")
     public Long getTransactionId(){
         return transactionId;
     }
@@ -41,7 +41,7 @@ public class AccountTransaction implements Serializable {
     public Long getMemberId(){
         return memberId;
     }
-
+    @Column(name = "AMOUNT")
     public Long getAmount(){
         return amount;
     }

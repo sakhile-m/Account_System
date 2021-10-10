@@ -1,10 +1,15 @@
 package za.ac.nwu.ac.domain.dto;
 
 import za.ac.nwu.ac.domain.persistence.AccountType;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
+
+@ApiModel(value = "AccountType",
+        description = "DTO that represents the AccountType")
 
 public class AccountTypeDto implements Serializable {
 
@@ -22,8 +27,18 @@ public class AccountTypeDto implements Serializable {
     }
 
     public AccountTypeDto(AccountType accountType) {
+        this.setAccountTypeName(accountType.getAccountTypeName());
+        this.setCreationDate(accountType.getCreationDate());
+        this.setMnemonic(accountType.getMnemonic());
     }
 
+    @ApiModelProperty(position = 1,
+    value = "AccountType Mnemonic",
+    name = "Mnemonic",
+    notes = "Uniquely ids the account type",
+    dataType = "java.long.String",
+    example = "MILES",
+    required = true)
     public String getMnemonic() {
         return mnemonic;
     }
@@ -32,6 +47,13 @@ public class AccountTypeDto implements Serializable {
         this.mnemonic = mnemonic;
     }
 
+    @ApiModelProperty(position = 2,
+            value = "AccountType Name",
+            name = "Name",
+            notes = "Account type name",
+            dataType = "java.long.String",
+            example = "MILES",
+            required = true)
     public String getAccountTypeName() {
         return accountTypeName;
     }
@@ -40,6 +62,13 @@ public class AccountTypeDto implements Serializable {
         this.accountTypeName = accountTypeName;
     }
 
+    @ApiModelProperty(position = 2,
+            value = "AccountType Creation Date",
+            name = "CreationDate",
+            notes = "Date of account type creation",
+            dataType = "java.long.String",
+            example = "2020-03-01",
+            required = true)
     public LocalDate getCreationDate() {
         return creationDate;
     }
@@ -64,4 +93,6 @@ public class AccountTypeDto implements Serializable {
     public String getAccountType() {
         return accountTypeName;
     }
+
+
 }

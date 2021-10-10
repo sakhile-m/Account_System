@@ -34,8 +34,8 @@ public class AccountType implements Serializable{
     }
 
     @Id
-    @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ", sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "VIT_RSA_GENERIC_SEQ")
+    @SequenceGenerator(name = "HR_GENERIC_SEQ", sequenceName = "HR_GENERIC_SEQ", allocationSize = 1)
+    @GeneratedValue//(strategy = GenerationType.SEQUENCE, generator = "HR_GENERIC_SEQ")
     @Column(name = "ACCOUNT_TYPE_ID")
     public Long getAccountTypeId(){
         return accountTypeId;
@@ -57,10 +57,10 @@ public class AccountType implements Serializable{
     }
 
 
-    @OneToMany(targetEntity = AccountTransaction.class, fetch = FetchType.LAZY, mappedBy = "accountType", orphanRemoval = true, cascade = CascadeType.PERSIST)
-    public Set<AccountTransaction> getAccountTransactions() {
-        return accountTransactions;
-    }
+//    @OneToMany(targetEntity = AccountTransaction.class, fetch = FetchType.LAZY, mappedBy = "accountType", orphanRemoval = true, cascade = CascadeType.PERSIST)
+//    public Set<AccountTransaction> getAccountTransactions() {
+//        return accountTransactions;
+//    }
 
     public void setAccountTransactions(Set<AccountTransaction> accountTransactions) {
         this.accountTransactions = accountTransactions;

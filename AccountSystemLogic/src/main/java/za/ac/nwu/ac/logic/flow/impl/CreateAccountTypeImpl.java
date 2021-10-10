@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 
-@Transactional
+//@Transactional
 @Component("createAccountTypeFlowName")
 public class CreateAccountTypeImpl {
 }

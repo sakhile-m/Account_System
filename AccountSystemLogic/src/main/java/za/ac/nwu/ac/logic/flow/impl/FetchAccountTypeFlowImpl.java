@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Transactional
+//@Transactional
 @Component
 public class FetchAccountTypeFlowImpl implements FetchAccountTypeFlow{
     private final AccountTypeTranslator accountTypeTranslator;
